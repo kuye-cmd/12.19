@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 400px;
+            margin: 0 auto;
+            border: 1px black solid;
+            padding: 0 10px;
+            position: relative;
+            margin-top: 200px;
+            overflow: hidden;
+        }
+        div ul{
+            position: absolute;
+            top: -52px;
+            left: 20px;
+            padding: 0;
+            /* transition: all ease-in-out 0.1s; */
+        }
+        div li{
+            width: 280px;
+            height: 27px;
+            border-top: 1px black solid;
+            color: #666;
+            line-height: 25px;
+            list-style: none;
+        }
+        div ul li:nth-child(2){
+            border: none;
+        }
+        div ul h2{
+            text-align: center;
+            width: 280px;
+            font-size: 18px;
+            font-weight: 400;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div>
+        <ul>
+            <h2>↓pull down</h2>
+            <li>I am item 150</li>
+            <li>I am item 149</li>
+            <li>I am item 148</li>
+            <li>I am item 147</li>
+            <li>I am item 146</li>
+            <li>I am item 145</li>
+            <li>I am item 144</li>
+            <li>I am item 143</li>
+            <li>I am item 142</li>
+            <li>I am item 141</li>
+            <li>I am item 140</li>
+            <li>I am item 139</li>
+            <li>I am item 138</li>
+            <li>I am item 137</li>
+        </ul>
+    </div> -->
+</body>
+<script>
+    (function(window){
+        // 创建标签
+        var div = document.createElement('div');
+        var ul = document.createElement('ul');
+        var h2 = document.createElement('h2');
+        h2.textContent = "↓pull down";
+        ul.appendChild(h2);
+        for (let j = 150; j >= 137; j--) {
+            var li = document.createElement('li');
+            li.innerText = `I am item ${j}`;
+            ul.appendChild(li);
+        }
+        div.appendChild(ul);
+        document.body.appendChild(div);
+        li=document.querySelectorAll('li');
+        var transitionState = "";
+        //鼠标按下事件
+    div.addEventListener("mousedown", function (e) {
+        h2.innerText = "↓pull down";
+        transitionState = "none";
+        ul.style.transition = transitionState;
+        e.preventDefault();
+        window.y = e.y;
+        window.x = e.x;
+        document.addEventListener('mousemove', move);
+        //鼠标松开事件
+        document.addEventListener("mouseup", function (e) {
+            document.removeEventListener('mousemove', move);
+            if (h2.innerText == "↑Release") {
+                h2.innerText = "Loading...";
+                transitionState = "all ease-in-out 0.3s 1s";
+                ul.style.transition = transitionState;
+                setTimeout(function(){
+                    for(var i=0;i<li.length;i++){
+                        console.log(li[i].innerText);
+                        li[i].innerText="I am item "+(parseInt(li[i].innerText.match(/\d+/)[0])+30);
+                    }
+                },1000)
+            }else{
+                transitionState = "all ease-in-out 0.3s";
+                ul.style.transition = transitionState;
+            }
+            ul.style.top = `-52px`;
+        });
+        //鼠标移动事件
+        var movex=0
+        var movey=0
+        var a={x:x,y:y};
+        var b={x:x,y:y+1};
+        var c={};
+        function move(e) {
+            movex=e.x;
+            movey=e.y;
+            c={x:movex,y:movey}
+            console.log(getDegree(a,b,c));
+            console.log(a);
+            
+            if (getDegree(a,b,c)<50 &&getDegree(a,b,c)>-50) {
+                if (e.y - y >= 0  && e.y - y<=100) {
+                    ul.style.top = `${parseInt(e.y - y) - 52}px`;
+                }
+                if (e.y - y > 80) {
+                    h2.innerText = "↑Release";
+                }
+                // console.log(getDegree(a,c,b));
+                
+            }else{
+                y=e.y;
+            }
+        }
+        function getDegree(a, b, c) {
+        var vecAB = { x: b.x - a.x, y: b.y - a.y };
+        var vecAC = { x: c.x - a.x, y: c.y - a.y };
+        if (vecAC.x>0) {
+            var vecABdotVecAC = vecAB.x * vecAC.x + vecAB.y * vecAC.y;
+            var scalarAB = Math.sqrt(Math.pow(vecAB.x, 2) + Math.pow(vecAB.y, 2));
+            var scalarAC = Math.sqrt(Math.pow(vecAC.x, 2) + Math.pow(vecAC.y, 2));
+            var deg = Math.acos(vecABdotVecAC / (scalarAB * scalarAC));
+            return -((deg * 180) / Math.PI);
+    }else{
+        var vecABdotVecAC = vecAB.x * vecAC.x + vecAB.y * vecAC.y;
+        var scalarAB = Math.sqrt(Math.pow(vecAB.x, 2) + Math.pow(vecAB.y, 2));
+        var scalarAC = Math.sqrt(Math.pow(vecAC.x, 2) + Math.pow(vecAC.y, 2));
+        var deg = Math.acos(vecABdotVecAC / (scalarAB * scalarAC));
+        return (deg * 180) / Math.PI;
+    }
+  }
+    });
+})(window)
+</script>
+</html>

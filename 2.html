@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        button:active{
+            background-color: black;
+        }
+        #fixed{
+            bottom: -400px;
+            background-color: #ccc;
+        }
+
+        #fixed>div{
+            /* margin-top: 30px; */
+            /* height: 100px; */
+            /* background-color: aquamarine; */
+            cursor: pointer;
+            /* transition: all ease-in-out 0.1s; */
+        }
+    </style>
+</head>
+<body>
+    <button class="w-40 h-10 border border-red-400 mt-96 mx-auto block active:bg-black">show</button>
+    <div class="fixed w-full h-96 bg-slate-300 bottom-0" id="fixed">
+        <div class="mt-8 h-10 bg-yellow-200 cursor-pointer"></div>
+    </div>
+</body>
+<script>
+    var fixed=document.querySelector('#fixed');
+    var button=document.querySelector('button');
+    button.onclick=function(){
+        fixed.style.bottom="0px"
+
+    }
+    console.log(fixed);
+    fixed.addEventListener("mousedown",function(e){
+        fixed.style.transition="";
+        // var x=e.x;
+        e.preventDefault();
+        var y=e.y;
+        document.addEventListener("mousemove",move)
+        document.addEventListener("mouseup",function(e){
+            document.removeEventListener("mousemove",move)
+            console.log(y-e.y>-300);
+            // e.preventDefault(); 
+            if (y-e.y>-300){
+                fixed.style.transition="all ease-in-out 0.4s";
+                fixed.style.bottom="0px"
+                console.log(1);
+            }else{
+                fixed.style.transition="all ease-in-out 0.4s";
+                fixed.style.bottom="-400px"
+            }
+        })
+        function move(e){
+                if (y-e.y<=0) {
+                    fixed.style.bottom=`${y-e.y}px`
+                }
+                
+            }
+    })
+</script>
+</html>

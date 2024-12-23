@@ -1,0 +1,709 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul li{
+    list-style: none;
+}
+
+.home{
+    width: 1920px;
+    height: 1400px;
+    background: linear-gradient(90deg, #934BFF, #5F3AFC);
+    position: relative;
+    overflow: hidden;
+}
+
+.home .home_top{
+    width: 1170px;
+    height: 150px;
+    margin: 0 375px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home .home_top .logo{
+    width: 104px;
+    height: 28px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 37px;
+    color: #FFFFFF;
+    line-height: 73px;
+    margin-top: 54px;
+}
+
+.home .home_top .nav{
+    width: 428px;
+    height: 14px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    line-height: 28px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72px;
+}
+
+.home .home_top .nav li:nth-child(1){
+    width: 87px;
+    height: 29px;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 24px 0px rgba(116,65,253,0.5);
+    border-radius: 15px;
+    text-align: center;
+    color: #7441FD ;
+}
+
+.home .home_top .login{
+    width: 240px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 52px;
+}
+
+.home .home_top .login button:nth-child(2){
+    width: 180px;
+    height: 56px;
+    background: #FFFFFF;
+    box-shadow: 0px 15px 24px 0px rgba(23,3,79,0.1);
+    border-radius: 28px;
+    border: none;
+}
+
+.home .home_top .login div:nth-child(1){
+    margin-top: 20px;
+    outline: none;
+    color: white;
+}
+
+.home .underline{
+    width: 1920px;
+    height: 1px;
+    background: #FFFFFF;
+    opacity: 0.25;
+    position: absolute;
+    top: 150px;
+}
+
+.home .ball1{
+    width: 987px;
+    height: 987px;
+    background: linear-gradient(-67deg, #934BFF, #5F3AFC);
+    border-radius: 50%;
+    margin-top: 291px;
+    margin-left: -413px;
+    float: left;
+}
+
+.home .ball2{
+    width: 1159px;
+    height: 1159px;
+    background: linear-gradient(90deg, #934BFF, #5F3AFC);
+    border-radius: 50%;
+    float: right;
+    margin-top: 120px;
+    margin-right: -428px;
+}
+.home .cont{
+    height: 1278px;
+    width: 1170px;
+    position: absolute;
+    top: 150px;
+    margin: 0 375px;
+    z-index: 20;
+}
+
+.home .cont p:nth-child(1){
+    width: 183px;
+    height: 16px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 28px;
+    margin-top: 123px;
+}
+
+.home .cont h2:nth-child(2){
+    width: 613px;
+    height: 186px;
+    font-family: Source Han Sans CN;
+    font-weight: 800;
+    font-size: 80px;
+    color: #FFFFFF;
+    line-height: 100px;
+    margin-top: 29px;
+}
+
+.home .cont p:nth-child(3){
+    width: 540px;
+height: 45px;
+font-family: Myriad Pro;
+font-weight: 400;
+font-size: 18px;
+color: #FFFFFF;
+line-height: 28px;
+margin-top: 45px;
+}
+
+.home .cont ul,
+.banner .thank ul{
+    width: 140px;
+    height: 6px;
+    display: flex;
+}
+
+.home .cont ul li,
+.banner .thank ul li{
+    width: 36px;
+    height: 6px;
+    background: #663CFC;
+    border-radius: 3px;
+    margin-right: 12px;
+}
+
+.home .cont ul li:nth-child(2){
+    background-color: white;
+}
+
+.home .cont .nav{
+    width: 1110px;
+    height: 523px;
+    border-top: 1px white solid;
+    margin-top: 126px;
+}
+
+.home .cont .nav>div{
+    width: 290px;
+    height: 470px;
+    /* background: #FFFFFF; */
+    border-radius: 3px;
+    padding: 53px 40px 0 40px;
+}
+
+.home .cont .nav div:nth-child(1){
+    background-color: white;
+    box-shadow: 0px 15px 24px 0px rgba(23,3,79,0.1);
+}
+
+.home .cont .nav div h2{
+    width: 110px;
+    height: 23px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 24px;
+    color: white;
+    line-height: 26px;
+    margin-top: 23px;
+}
+
+.home .cont .nav div:nth-child(1) h2{
+    color: #191919;
+}
+
+.home .cont .nav div p{
+    width: 255px;
+    height: 46px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    line-height: 28px;
+    margin-top: 16px;
+}
+
+.home .cont .nav div:nth-child(1) p{
+    color: black;
+}
+
+.home .cont .nav div h5{
+    width: 104px;
+    height: 17px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 16px;
+    color: #663CFC;
+    line-height: 28px;
+    margin-top: 25px;
+}
+
+.home .cont .nav div h5:nth-child(4){
+    margin-top: 75px;
+}
+
+.home .cont .nav div div{
+    margin-top: 55px;
+    width: 68px;
+    height: 15px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 16px;
+    color: #663CFC;
+    line-height: 24px;
+    /* padding: 0; */
+}
+.home .line{
+    width: 100%;
+    height: 300px;
+    background-color: #FFFFFF;
+    position: absolute;
+    bottom: -66px;
+    z-index: 1;
+    transform: skewY(4deg);
+
+}
+
+.banner{
+    z-index: 20;
+    background-color: #FFFFFF;
+}
+
+
+.banner .star{
+    width: 1110px;
+    height: 0px;
+    margin: 0 375px;
+    position: relative;
+}
+
+.banner .star p{
+    /* width: 85px; */
+    height: 16px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 16px;
+    color: #010101;
+    line-height: 28px;
+    text-align: center;
+}
+
+.banner .star h2{
+    width: 539px;
+    height: 98px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 42px;
+    color: #262626;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 36px;
+}
+
+.banner .star h3{
+    width: 1022px;
+    height: 46px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+    line-height: 28px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.banner .star div{
+    /* width: 62px; */
+    height: 16px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 16px;
+    color: #663CFC;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 84px;
+}
+
+.banner .thank{
+    width: 924px;
+    /* height: 441px; */
+    background: linear-gradient(90deg, #934BFF, #5F3AFC);
+    margin-top: -445px;
+    padding: 148px 498px 170px 498px;
+}
+
+.banner .thank>p{
+    /* width: 1000px; */
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 28px;
+    /* margin:0 498px; */
+    text-align: center;
+}
+
+.banner .thank p:nth-child(1){
+    margin-top: 148px;
+}
+
+.banner .thank p:nth-child(3){
+    margin-top: 31px;
+}
+
+.banner .thank ul{
+    margin-top: 40px;
+    margin: 62px auto 0;
+}
+
+.banner .thank ul li:nth-child(2){
+    background-color: white;
+}
+
+.banner .newProjects{
+    width: 1110px;
+    height: 803px;
+    margin: 0 375px;
+    padding: 150px 0;
+}
+
+.banner .newProjects{
+    width: 1110px;
+    /* height: 6055px; */
+    background: #FFFFFF;
+    margin: 0 375px;
+}
+
+.banner .newProjects .Projects{
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner .newProjects .Projects>p{
+    /* width: 313px; */
+    height: 43px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 40px;
+    color: #191919;
+    line-height: 34px;
+}
+
+.banner .newProjects .Projects>ul{
+    width: 370px;
+    height: 16px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 16px;
+    /* color: #FFFFFF; */
+    line-height: 34px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 48px;
+}
+
+.banner .newProjects .Projects ul li:nth-child(1){
+    width: 119px;
+    height: 48px;
+    background: #663CFC;
+    box-shadow: 0px 6px 24px 0px rgba(116,65,253,0.5);
+    border-radius: 24px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.banner .newProjects>ul{
+    height: 650px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 80px;
+
+}
+.banner .newProjects>ul li p{
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 18px;
+    color: #222222;
+    line-height: 22px;
+}
+
+.banner .newProjects>ul li span{
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ccc;
+    line-height: 22px;
+}
+
+.banner .newProjects>ul li div{
+    width: 350px;
+    height: 236px;
+}
+
+.banner .newProjects>ul li:nth-child(1) div{
+    background-image: url(../img/组\ 1.png);
+    background-position: -23px;
+}
+.banner .newProjects>ul li:nth-child(2) div{
+    background-image: url(../img/组\ 2.png);
+    background-position: -23px;
+}
+.banner .newProjects>ul li:nth-child(3) div{
+    background-image: url(../img/组\ 3.png);
+    background-position: -23px;
+}
+.banner .newProjects>ul li:nth-child(4) div{
+    background-image: url(../img/组\ 4.png);
+    background-position: -23px;
+}
+.banner .newProjects>ul li:nth-child(5) div{
+    background-image: url(../img/组\ 5.png);
+    background-position: -23px;
+}
+.banner .newProjects ul li:nth-child(6) div{
+    background-image: url(../img/组\ 6.png);
+    background-position: -23px;
+}
+
+.banner .spread{
+    width: 1174px;
+    height: 288px;
+    padding: 150px 373px;
+    background: linear-gradient(90deg, rgba(147,75,255,0.75), rgba(95,58,252,0.75));
+    position: relative;
+}
+
+.banner .spread span{
+    display: block;
+    width: 181px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 64px;
+}
+
+.banner .spread>p{
+    width: 441px;
+    height: 97px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 40px;
+    color: #FFFFFF;
+    line-height: 56px;
+}
+
+.banner .spread ul{
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+    margin-top: 66px;
+}
+
+.banner .spread>ul li h2{
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 63px;
+    color: #FFFFFF;
+    line-height: 88px;
+}
+
+.banner .spread>ul li p{
+    width: 51px;
+    height: 13px;
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 23px;
+}
+
+.banner .spread img{
+    position: absolute;
+    top: calc(50% - 86px);
+    right: 650px;
+    border: 1px dashed #000000;
+}
+
+
+.banner .message{
+    padding-top: 150px;
+    position: relative;
+}
+.banner .message p{
+    width: 85px;
+    height: 13px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1A1A1A;
+    /* line-height: 64px; */
+    margin: 0 auto;
+}
+
+.banner .message h2{
+    width: 200px;
+    height: 44px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 46px;
+    color: #1A1A1A;
+    line-height: 56px;
+    margin: 0 auto;
+    margin-top: 21px;
+}
+
+.banner .message ul{
+    height: 390px;
+    width: 1172px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.banner .message ul li div{
+    width: 369px;
+    height: 204px;
+}
+
+.banner .message ul li:nth-child(1) div{
+    background-image: url(../img/1.png);
+}
+
+.banner .message ul li:nth-child(2) div{
+    background-image: url(../img/2.png);
+}
+
+.banner .message ul li:nth-child(3) div{
+    background-image: url(../img/3.png);
+}
+
+.banner .message ul li span{
+    display: block;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    color: #999999;
+}
+
+.banner .message ul li p{
+    width: 346px;
+    height: 65px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 20px;
+    color: #262626;
+    line-height: 34px;
+    overflow: hidden;
+}
+
+.banner .message ul li h2{
+    /* width: 89px; */
+    /* height: 11px; */
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    color: #ABABAB;
+    line-height: 24px;
+    text-align: left;
+    margin: 0;
+    margin-top: 37px;
+}
+
+.banner .message ul li:nth-child(1) h2{
+    color: #663CFC;
+}
+
+.banner .message .line{
+    transform: skewY(3deg);
+    width: 1920px;
+    height: 200px;
+    position: absolute;
+    bottom: -200px;
+    background-color: white;
+    left: 0;
+}
+
+.banner .end{
+    width: 1920px;
+    height: 730px;
+    background: linear-gradient(90deg, #934BFF, #5F3AFC);
+    margin-top: 50px;
+    /* padding: 300px 0; */
+    padding-top: 300px;
+}
+
+.banner .end .nav{
+    width: 1110px;
+    margin: 0 375px;
+    height: 500px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner .end .nav li{
+    width: 255px;
+}
+
+.banner .end .nav li:nth-child(1) h2{
+    font-size: 34px;
+}
+
+.banner .end .nav li h2{
+    /* width: 142px; */
+    height: 32px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+    line-height: 28px;
+    margin-bottom: 51px;
+}
+
+.banner .end .nav li p{
+    /* width: 237px; */
+    /* height: 54px; */
+    font-family: Myriad Pro;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FEFEFE;
+    line-height: 22px;
+    margin-bottom: 31px;
+}
+
+.banner .end .line{
+    width: 1110px;
+    height: 1px;
+    background: #FFFFFF;
+    margin: 0 375px;
+}
+
+.banner .end .e{
+    width: 1110px;
+    margin: 0 375px;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner .end .e div:nth-child(1){
+    width: 372px;
+    height: 16px;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    font-size: 14px;
+    color: #E6E6E6;
+    /* line-height: 38px; */
+    line-height: 130px;
+}
+
+.banner .end .e div:nth-child(2){
+    width: 313px;
+    height: 16px;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 16px;
+    color: #E6E6E6;
+    /* line-height: 58px; */
+    line-height: 130px;
+}
